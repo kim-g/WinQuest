@@ -1,0 +1,265 @@
+﻿<UserControl x:Class="WinQuest.VirtualKeyboard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WinQuest"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Background>
+        <ImageBrush ImageSource="images/VK.png"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="Numbers" Grid.Row="0">
+            <Grid x:Name="RusNumbers">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <local:VK_Button Small="1" Big="!" Grid.Column="0" Click="VK_Button_Click"/>
+                <local:VK_Button Small="2" Big="/" Grid.Column="1" Click="VK_Button_Click"/>
+                <local:VK_Button Small="3" Big="№" Grid.Column="2" Click="VK_Button_Click"/>
+                <local:VK_Button Small="4" Big=";" Grid.Column="3" Click="VK_Button_Click"/>
+                <local:VK_Button Small="5" Big="%" Grid.Column="4" Click="VK_Button_Click"/>
+                <local:VK_Button Small="6" Big=":" Grid.Column="5" Click="VK_Button_Click"/>
+                <local:VK_Button Small="7" Big="?" Grid.Column="6" Click="VK_Button_Click"/>
+                <local:VK_Button Small="8" Big="*" Grid.Column="7" Click="VK_Button_Click"/>
+                <local:VK_Button Small="9" Big="(" Grid.Column="8" Click="VK_Button_Click"/>
+                <local:VK_Button Small="0" Big=")" Grid.Column="9" Click="VK_Button_Click"/>
+                <local:VK_Button Small="-" Big="_" Grid.Column="10" Click="VK_Button_Click"/>
+                <local:VK_Button Small="=" Big="+" Grid.Column="11" Click="VK_Button_Click"/>
+            </Grid>
+            <Grid x:Name="EngNumbers" Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <local:VK_Button Small="1" Big="!" Grid.Column="0" Click="VK_Button_Click"/>
+                <local:VK_Button Small="2" Big="@" Grid.Column="1" Click="VK_Button_Click"/>
+                <local:VK_Button Small="3" Big="#" Grid.Column="2" Click="VK_Button_Click"/>
+                <local:VK_Button Small="4" Big="$" Grid.Column="3" Click="VK_Button_Click"/>
+                <local:VK_Button Small="5" Big="%" Grid.Column="4" Click="VK_Button_Click"/>
+                <local:VK_Button Small="6" Big="^" Grid.Column="5" Click="VK_Button_Click"/>
+                <local:VK_Button Small="7" Big="&amp;" Grid.Column="6" Click="VK_Button_Click"/>
+                <local:VK_Button Small="8" Big="*" Grid.Column="7" Click="VK_Button_Click"/>
+                <local:VK_Button Small="9" Big="(" Grid.Column="8" Click="VK_Button_Click"/>
+                <local:VK_Button Small="0" Big=")" Grid.Column="9" Click="VK_Button_Click"/>
+                <local:VK_Button Small="-" Big="_" Grid.Column="10" Click="VK_Button_Click"/>
+                <local:VK_Button Small="=" Big="+" Grid.Column="11" Click="VK_Button_Click"/>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="Letters" Grid.Row="1">
+            <Grid x:Name="RusLetters" Grid.Row="1" Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <local:VK_Button Small="й" Big="Й" Grid.Column="0" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="ц" Big="Ц" Grid.Column="1" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="у" Big="У" Grid.Column="2" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="к" Big="К" Grid.Column="3" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="е" Big="Е" Grid.Column="4" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="н" Big="Н" Grid.Column="5" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="г" Big="Г" Grid.Column="6" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="ш" Big="Ш" Grid.Column="7" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="щ" Big="Щ" Grid.Column="8" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="з" Big="З" Grid.Column="9" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="х" Big="Х" Grid.Column="10" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="ъ" Big="Ъ" Grid.Column="11" Click="VK_Button_Click"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <local:VK_Button Small="ф" Big="Ф" Grid.Column="0" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="ы" Big="Ы" Grid.Column="1" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="в" Big="В" Grid.Column="2" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="а" Big="А" Grid.Column="3" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="п" Big="П" Grid.Column="4" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="р" Big="Р" Grid.Column="5" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="о" Big="О" Grid.Column="6" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="л" Big="Л" Grid.Column="7" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="д" Big="Д" Grid.Column="8" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="ж" Big="Ж" Grid.Column="9" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="э" Big="Э" Grid.Column="10" Click="VK_Button_Click"/>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <local:VK_Button Small="я" Big="Я" Grid.Column="0" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="ч" Big="Ч" Grid.Column="1" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="с" Big="С" Grid.Column="2" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="м" Big="М" Grid.Column="3" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="и" Big="И" Grid.Column="4" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="т" Big="Т" Grid.Column="5" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="ь" Big="Ь" Grid.Column="6" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="б" Big="Б" Grid.Column="7" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="ю" Big="Ю" Grid.Column="8" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="." Big="," Grid.Column="9" Click="VK_Button_Click"/>
+                </Grid>
+            </Grid>
+            <Grid x:Name="EngLetters" Grid.Row="1" >
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <local:VK_Button Small="q" Big="Q" Grid.Column="0" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="w" Big="W" Grid.Column="1" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="e" Big="E" Grid.Column="2" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="r" Big="R" Grid.Column="3" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="t" Big="T" Grid.Column="4" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="y" Big="Y" Grid.Column="5" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="u" Big="U" Grid.Column="6" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="i" Big="I" Grid.Column="7" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="o" Big="O" Grid.Column="8" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="p" Big="P" Grid.Column="9" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="[" Big="{}{" Grid.Column="10" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="]" Big="}" Grid.Column="11" Click="VK_Button_Click"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <local:VK_Button Small="a" Big="A" Grid.Column="0" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="s" Big="S" Grid.Column="1" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="d" Big="D" Grid.Column="2" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="f" Big="F" Grid.Column="3" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="g" Big="G" Grid.Column="4" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="h" Big="H" Grid.Column="5" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="j" Big="J" Grid.Column="6" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="k" Big="K" Grid.Column="7" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="l" Big="L" Grid.Column="8" Click="VK_Button_Click"/>
+                    <local:VK_Button Small=";" Big=":" Grid.Column="9" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="'" Big="&quot;" Grid.Column="10" Click="VK_Button_Click"/>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <local:VK_Button Small="z" Big="Z" Grid.Column="0" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="x" Big="X" Grid.Column="1" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="c" Big="C" Grid.Column="2" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="v" Big="V" Grid.Column="3" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="b" Big="B" Grid.Column="4" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="n" Big="N" Grid.Column="5" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="m" Big="M" Grid.Column="6" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="," Big="&lt;" Grid.Column="7" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="." Big="&gt;" Grid.Column="8" Click="VK_Button_Click"/>
+                    <local:VK_Button Small="/" Big="?" Grid.Column="9" Click="VK_Button_Click"/>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="Functions" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <local:VK_Button Small="Shift" Big="Shift" Grid.Column="0" Click="VK_Button_Click"/>
+            <local:VK_Button Small="&lt;-" Big="&lt;-" Grid.Column="1" Click="VK_Button_Click"/>
+            <local:VK_Button Small=" " Big=" " Grid.Column="2" Click="VK_Button_Click"/>
+            <local:VK_Button Small="En/Ru" Big="En/Ru" Grid.Column="3" Click="VK_Button_Click"/>
+            <local:VK_Button Small="OK" Big="OK" Grid.Column="4" Click="VK_Button_Click"/>
+        </Grid>
+    </Grid>
+</UserControl>
