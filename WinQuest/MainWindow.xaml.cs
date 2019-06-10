@@ -23,6 +23,8 @@ namespace WinQuest
         private User CurrentUser;
         private UsersDB DB = new UsersDB("users.db");
 
+        public User[] users;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -47,6 +49,9 @@ namespace WinQuest
         private void S_01_B_1_Click(object sender, RoutedEventArgs e)
         {
             HideAll();
+            foreach (TextBox TB in SlideGrid_Input.Children.OfType<TextBox>())
+                TB.Text = "";
+            VK.Visibility = Visibility.Hidden;
             SlideGrid_Input.Visibility = Visibility.Visible;
         }
 
@@ -191,6 +196,29 @@ namespace WinQuest
         {
             HideAll();
             SlideGrid_01.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            HideAll();
+            CurrentUser = null;
+            SlideGrid_01.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Вы точно уверены, что хотите очистить список?\nОтменить это действие будет невозможно!", "Очищение списка", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                DB.Execute("DELETE FROM `users`");
+                ResultsList.ItemsSource = DB.GetUserList();
+            }
+        }
+
+        private void S_01_B_2_Click(object sender, RoutedEventArgs e)
+        {
+            ResultsList.ItemsSource = DB.GetUserList();
+            HideAll();
+            Results.Visibility = Visibility.Visible;
         }
     }
 }

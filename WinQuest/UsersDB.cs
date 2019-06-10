@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WinQuest
 {
-    class UsersDB : SQLite.SQLiteDataBase
+    public class UsersDB : SQLite.SQLiteDataBase
     {
         public UsersDB(string FileName) : base(FileName)
         {
@@ -31,20 +31,21 @@ namespace WinQuest
 
         public void Update(string Column, string Value, long ID)
         {
-            Execute($"UPDATE `users` SET `{Column}` = '{Value}' WHERE `id`={ID};'");
+            string NewValue = Value.Replace("'", "''");
+            Execute($"UPDATE `users` SET `{Column}` = '{NewValue}' WHERE `id`={ID};'");
         }
 
         public List<User> GetUserList()
         {
             List<User> U = new List<User>();
 
-            DataTable dt = ReadTable($"SELECT * FROM `users` ORDER BY Poi");
+            DataTable dt = ReadTable($"SELECT * FROM `users` ORDER BY `points` DESC");
 
             foreach (DataRow Row in dt.Rows)
             {
                 U.Add(User.ReadUser( this,
                     Convert.ToInt64(Row.ItemArray[dt.Columns.IndexOf("id")]),
-                    Row.ItemArray[dt.Columns.IndexOf("name")].ToString(),
+                    Row.ItemArray[dt.Columns.IndexOf("user_name")].ToString(),
                     Row.ItemArray[dt.Columns.IndexOf("phone")].ToString(),
                     Row.ItemArray[dt.Columns.IndexOf("mail")].ToString(),
                     Convert.ToInt32(Row.ItemArray[dt.Columns.IndexOf("points")])
@@ -55,7 +56,7 @@ namespace WinQuest
         }
     }
 
-    class User
+    public class User
     {
         private long ID;
         private string name;

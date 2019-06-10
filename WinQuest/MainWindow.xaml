@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WinQuest"
+        xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
         mc:Ignorable="d"
         Title="ДелоБанк" Height="1920" Width="1080" WindowState="Maximized" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Window.Resources>
@@ -99,20 +100,21 @@
                 <ImageBrush ImageSource="images/Slide_01.png"/>
             </Grid.Background>
             <Button x:Name="S_01_B_1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="727" Margin="174,1302,0,0" Height="136" Style="{StaticResource StandartBtn}"  HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="S_01_B_1_Click"/>
+            <Button x:Name="S_01_B_2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="65" Margin="216,1106,0,0" Height="72" Style="{StaticResource StandartBtn}"  HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="S_01_B_2_Click"/>
         </Grid>
 
-        <Grid x:Name="SlideGrid_Input">
+        <Grid x:Name="SlideGrid_Input" Visibility="Collapsed">
             <Grid.Background>
                 <ImageBrush ImageSource="images/Slide_Input.png"/>
             </Grid.Background>
-            <Button x:Name="S_In_B_1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="727" Margin="176,1538,0,0" Height="136" Style="{StaticResource StandartBtn}"  HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="S_In_B_1_Click"/>
-            <local:VirtualKeyboard x:Name="VK" Visibility="Hidden" HorizontalAlignment="Left" Height="478" Margin="54,992,0,0" VerticalAlignment="Top" Width="976" FontSize="36" Language="Rus" Lang="Rus"/>
-            <TextBox x:Name="UserName" HorizontalAlignment="Left" Height="103" Margin="194,314,0,0" Style="{StaticResource StandartTextBox}" VerticalAlignment="Top" Width="774" GotFocus="TestBox_GotFocus" VerticalContentAlignment="Bottom"/>
-            <TextBox x:Name="UserPhone" HorizontalAlignment="Left" Height="103" Margin="194,518,0,0" Style="{StaticResource StandartTextBox}" VerticalAlignment="Top" Width="774" GotFocus="TestBox_GotFocus" VerticalContentAlignment="Bottom"/>
-            <TextBox x:Name="UserMail" HorizontalAlignment="Left" Height="103" Margin="194,720,0,0" Style="{StaticResource StandartTextBox}" VerticalAlignment="Top" Width="774" GotFocus="TestBox_GotFocus" VerticalContentAlignment="Bottom"/>
+            <Button x:Name="S_In_B_1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="727" Margin="174,1472,0,0" Height="136" Style="{StaticResource StandartBtn}"  HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="S_In_B_1_Click"/>
+            <local:VirtualKeyboard x:Name="VK" Visibility="Hidden" HorizontalAlignment="Left" Height="456" Margin="52,960,0,0" VerticalAlignment="Top" Width="976" FontSize="36" Language="Rus" Lang="Rus"/>
+            <TextBox x:Name="UserName" HorizontalAlignment="Left" Height="103" Margin="194,364,0,0" Style="{StaticResource StandartTextBox}" VerticalAlignment="Top" Width="774" GotFocus="TestBox_GotFocus" VerticalContentAlignment="Bottom"/>
+            <TextBox x:Name="UserPhone" HorizontalAlignment="Left" Height="103" Margin="194,550,0,0" Style="{StaticResource StandartTextBox}" VerticalAlignment="Top" Width="774" GotFocus="TestBox_GotFocus" VerticalContentAlignment="Bottom"/>
+            <TextBox x:Name="UserMail" HorizontalAlignment="Left" Height="103" Margin="194,732,0,0" Style="{StaticResource StandartTextBox}" VerticalAlignment="Top" Width="774" GotFocus="TestBox_GotFocus" VerticalContentAlignment="Bottom"/>
         </Grid>
 
-        <Grid x:Name="SlideGrid_02">
+        <Grid x:Name="SlideGrid_02" Visibility="Collapsed">
             <Grid.Background>
                 <ImageBrush ImageSource="images/Slide_02.png"/>
             </Grid.Background>
@@ -139,7 +141,7 @@
             <Button x:Name="S_04_B_3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="877" Margin="100,1480,0,0" Height="160" Style="{StaticResource StandartBtn}"  HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="S_04_B_2_Click"/>
         </Grid>
 
-        <Grid x:Name="SlideGrid_05">
+        <Grid x:Name="SlideGrid_05" Visibility="Collapsed">
             <Grid.Background>
                 <ImageBrush ImageSource="images/Slide_05.png"/>
             </Grid.Background>
@@ -148,7 +150,7 @@
             <Button x:Name="S_05_B_3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="877" Margin="100,1480,0,0" Height="160" Style="{StaticResource StandartBtn}"  HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="S_05_B_1_Click"/>
         </Grid>
 
-        <Grid x:Name="SlideGrid_06">
+        <Grid x:Name="SlideGrid_06" Visibility="Collapsed">
             <Grid.Background>
                 <ImageBrush ImageSource="images/Slide_06.png"/>
             </Grid.Background>
@@ -157,7 +159,7 @@
             <Button x:Name="S_06_B_3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="877" Margin="100,1480,0,0" Height="160" Style="{StaticResource StandartBtn}"  HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="S_06_B_2_Click"/>
         </Grid>
 
-        <Grid x:Name="SlideGrid_07">
+        <Grid x:Name="SlideGrid_07" Visibility="Collapsed">
             <Grid.Background>
                 <ImageBrush ImageSource="images/Slide_07.png"/>
             </Grid.Background>
@@ -166,7 +168,7 @@
             <Button x:Name="S_07_B_3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="877" Margin="100,1480,0,0" Height="160" Style="{StaticResource StandartBtn}"  HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="S_07_B_2_Click"/>
         </Grid>
 
-        <Grid x:Name="SlideGrid_08">
+        <Grid x:Name="SlideGrid_08" Visibility="Collapsed">
             <Grid.Background>
                 <ImageBrush ImageSource="images/Slide_08.png"/>
             </Grid.Background>
@@ -175,7 +177,7 @@
             <Button x:Name="S_08_B_3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="877" Margin="100,1480,0,0" Height="160" Style="{StaticResource StandartBtn}"  HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="S_08_B_2_Click"/>
         </Grid>
 
-        <Grid x:Name="SlideGrid_09">
+        <Grid x:Name="SlideGrid_09" Visibility="Collapsed">
             <Grid.Background>
                 <ImageBrush ImageSource="images/Slide_09.png"/>
             </Grid.Background>
@@ -184,7 +186,7 @@
             <Button x:Name="S_09_B_3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="877" Margin="100,1480,0,0" Height="160" Style="{StaticResource StandartBtn}"  HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="S_09_B_2_Click"/>
         </Grid>
 
-        <Grid x:Name="SlideGrid_10">
+        <Grid x:Name="SlideGrid_10" Visibility="Collapsed">
             <Grid.Background>
                 <ImageBrush ImageSource="images/Slide_10.png"/>
             </Grid.Background>
@@ -193,7 +195,7 @@
             <Button x:Name="S_10_B_3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="877" Margin="100,1480,0,0" Height="160" Style="{StaticResource StandartBtn}"  HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="S_10_B_2_Click"/>
         </Grid>
 
-        <Grid x:Name="SlideGrid_11">
+        <Grid x:Name="SlideGrid_11" Visibility="Collapsed">
             <Grid.Background>
                 <ImageBrush ImageSource="images/Slide_11.png"/>
             </Grid.Background>
@@ -202,18 +204,37 @@
             <Button x:Name="S_11_B_3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="877" Margin="100,1480,0,0" Height="160" Style="{StaticResource StandartBtn}"  HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="S_11_B_2_Click"/>
         </Grid>
 
-        <Grid x:Name="SlideGrid_Code">
+        <Grid x:Name="SlideGrid_Code" Visibility="Collapsed">
             <Grid.Background>
                 <ImageBrush ImageSource="images/Slide_Code.png"/>
             </Grid.Background>
-            <Button x:Name="S_Co_B_1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="727" Margin="174,1348,0,0" Height="136" Style="{StaticResource StandartBtn}"  HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="S_Co_B_1_Click"/>
+            <Button x:Name="S_Co_B_1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="727" Margin="176,1302,0,0" Height="136" Style="{StaticResource StandartBtn}"  HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="S_Co_B_1_Click"/>
         </Grid>
 
-        <Grid x:Name="SlideGrid_12">
+        <Grid x:Name="SlideGrid_12" Visibility="Collapsed">
             <Grid.Background>
                 <ImageBrush ImageSource="images/Slide_12.png"/>
             </Grid.Background>
-            <Button x:Name="S_12_B_1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="727" Margin="174,1122,0,0" Height="136" Style="{StaticResource StandartBtn}"  HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="S_12_B_1_Click"/>
+            <Button x:Name="S_12_B_1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="727" Margin="176,1304,0,0" Height="136" Style="{StaticResource StandartBtn}"  HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="S_12_B_1_Click"/>
+        </Grid>
+
+        <Grid x:Name="Results" Visibility="Collapsed">
+            <Grid.Background>
+                <ImageBrush ImageSource="images/Slide_12.png"/>
+            </Grid.Background>
+            <ListView x:Name="ResultsList" Margin="64,184,64,136" FontSize="20">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Points}" Width="60">Баллы</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Width="400">Имя</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Phone}" Width="200">Телефон</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Mail}">E-Mail</GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button Content="&lt;- Назад" HorizontalAlignment="Left" Margin="64,1809,0,0" VerticalAlignment="Top" Width="441" Height="54" FontSize="36" Click="Button_Click"/>
+            <Button Content="Очистить список" HorizontalAlignment="Left" Margin="575,1809,0,0" VerticalAlignment="Top" Width="441" Height="54" FontSize="36" Click="Button_Click_1"/>
+
         </Grid>
     </Grid>
 </Window>
